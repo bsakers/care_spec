@@ -30,8 +30,7 @@
         1,
         null
       ],
-      "/Users/brianakers/challenges/healthcare_utilization/app/models/patient.rb": [
-        1,
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/admission.rb": [
         1,
         1,
         1,
@@ -43,6 +42,14 @@
         1,
         null
       ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/patient.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/brianakers/challenges/healthcare_utilization/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -52,6 +59,10 @@
       "/Users/brianakers/challenges/healthcare_utilization/app/channels/application_cable/connection.rb": [
         0,
         0,
+        0,
+        0
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/controllers/admissions_controller.rb": [
         0,
         0
       ],
@@ -74,6 +85,6 @@
         0
       ]
     },
-    "timestamp": 1505760119
+    "timestamp": 1505764961
   }
 }

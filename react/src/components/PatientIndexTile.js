@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const PatientIndexTile= (props) => {
   return (
     <div className="PatientIndexTile">
-      <Link to={`/patients`}>
+      <Link to={`/patients/${props.id}`}>
         <h5>{props.firstName}
         {props.middleName}
         {props.lastName}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 import NavBar from './components/NavBar';
 import PatientsIndexContainer from './containers/PatientsIndexContainer';
+import PatientShowContainer from './containers/PatientShowContainer';
 
 
 
@@ -10,6 +11,7 @@ const App = (props) => {
     <Router history={browserHistory}>
       <Route path='/patients' component={NavBar}>
         <IndexRoute component={PatientsIndexContainer} />
+        <Route path='/patients/:id' component={PatientShowContainer}/>
       </Route>
     </Router>
   )
