@@ -1,0 +1,79 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/brianakers/challenges/healthcare_utilization/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/helpers/patients_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/controllers/api/v1/patients_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/controllers/api_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/patient.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/controllers/patients_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/controllers/static_pages_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1505758569
+  }
+}
