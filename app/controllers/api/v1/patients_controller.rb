@@ -8,8 +8,10 @@ class Api::V1::PatientsController < ApiController
     patient= Patient.find(params[:id])
     admissions= patient.admissions
     ed_visits= patient.ed_visits
+    patient_diagnoses= patient.diagnoses
     patient_data={
       patient: patient,
+      patient_diagnoses: patient_diagnoses,
       admissions: admissions,
       ed_visits: ed_visits
     }
