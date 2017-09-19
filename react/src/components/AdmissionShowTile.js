@@ -1,8 +1,8 @@
 import React from 'react';
 
-const PatientShowTile= (props) => {
+const AdmissionShowTile= (props) => {
   return (
-    <div className="PatientShowTile">
+    <div className="AdmissionShowTile">
       <p>Hospital: {props.hospital}</p>
       <p>Admission Date: {props.admissionDate}</p>
       <p>Length of Stay: {props.lengthOfStay}</p>
@@ -10,4 +10,4 @@ const PatientShowTile= (props) => {
   )
 }
 
-export default PatientShowTile;
+export default AdmissionShowTile;

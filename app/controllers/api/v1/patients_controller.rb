@@ -6,12 +6,14 @@ class Api::V1::PatientsController < ApiController
 
   def show
     patient= Patient.find(params[:id])
-    admissions = patient.admissions
-    patientData={
+    admissions= patient.admissions
+    ed_visits= patient.ed_visits
+    patient_data={
       patient: patient,
-      admissions: admissions
+      admissions: admissions,
+      ed_visits: ed_visits
     }
-    render json: patientData
+    render json: patient_data
   end
 
 end

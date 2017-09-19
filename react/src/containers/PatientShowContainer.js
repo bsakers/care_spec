@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import PatientShowTile from '../components/PatientShowTile'
+import AdmissionShowTile from '../components/AdmissionShowTile'
+import EdVisitShowTile from '../components/EdVisitShowTile'
 
 class PatientShowContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
       patient: {},
-      admissions: []
+      admissions: [],
+      edVisits: []
     }
   }
 
   componentDidMount() {
-    let path = location.pathname
-    fetch(`/api/v1/${path}`)
+    fetch(`/api/v1/patients/${this.props.params.id}`)
       .then(response => {
         if (response.ok) {
           return response;
@@ -26,6 +27,7 @@ class PatientShowContainer extends Component {
       .then(body => {
         this.setState({ patient: body.patient})
         this.setState({ admissions: body.admissions })
+        this.setState({ edVisits: body.ed_visits})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -35,12 +37,24 @@ class PatientShowContainer extends Component {
     let admissions;
     admissions= this.state.admissions.map(admission => {
       return(
-        <PatientShowTile
+        <AdmissionShowTile
           key={admission.id}
           id={admission.id}
           hospital={admission.hospital}
           lengthOfStay={admission.length_of_stay}
           admissionDate={admission.admission_date}
+        />
+      )
+    })
+
+    let edVisits;
+    edVisits= this.state.edVisits.map(visit =>{
+      return(
+        <EdVisitShowTile
+          key={visit.id}
+          id={visit.id}
+          hospital={visit.hospital}
+          visitDate={visit.ed_visit_date}
         />
       )
     })
@@ -51,6 +65,7 @@ class PatientShowContainer extends Component {
         <h3> Middle Name: {this.state.patient.middle_name} </h3>
         <h3> Last Name: {this.state.patient.last_name} </h3>
         {admissions}
+        {edVisits}
       </div>
     );
   }
