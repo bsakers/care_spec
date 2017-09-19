@@ -11,6 +11,8 @@ require 'faker'
 Patient.destroy_all
 Admission.destroy_all
 EdVisit.destroy_all
+Diagnosis.destroy_all
+PatientDiagnosis.destroy_all
 
 10.times do
   patient_params = {
@@ -40,4 +42,22 @@ end
     ed_visit_date: "#{Faker::Date.between(1.year.ago, Date.today)}",
   }
   EdVisit.create(visit_params)
+end
+
+["Hypertension", "Hyperlipidemia", "Diabetes", "Back pain", "Anxiety",
+"Obesity", "Reflux esophagitis", "Hypothyroidism","Osteoarthritis",
+"Fibromyalgia / myositis", "Malaise and fatigue",
+"Acute laryngopharyngitis", "Acute maxillary sinusitis",
+"Major depressive disorder", "Acute bronchitis", "Asthma",
+"Depressive disorder", "Nail fungus", "Coronary atherosclerosis",
+"Urinary tract infection"].each do |diagnosis|
+  Diagnosis.create(name: "#{diagnosis}")
+end
+
+30.times do
+  pd_params = {
+    patient_id: Patient.all.ids.sample,
+    diagnosis_id: Diagnosis.all.ids.sample
+  }
+  PatientDiagnosis.create(pd_params)
 end

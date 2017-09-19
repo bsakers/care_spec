@@ -55,6 +55,13 @@
         1,
         null
       ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/diagnosis.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/brianakers/challenges/healthcare_utilization/app/models/ed_visit.rb": [
         1,
         1,
@@ -62,7 +69,16 @@
         1,
         null
       ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/patient_diagnosis.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/brianakers/challenges/healthcare_utilization/app/models/patient.rb": [
+        1,
         1,
         1,
         1,
@@ -108,6 +124,6 @@
         0
       ]
     },
-    "timestamp": 1505780198
+    "timestamp": 1505835930
   }
 }
