@@ -14,7 +14,7 @@ EdVisit.destroy_all
 Diagnosis.destroy_all
 PatientDiagnosis.destroy_all
 
-10.times do
+100.times do
   patient_params = {
     first_name: "#{Faker::Name.first_name}",
     middle_name: "#{Faker::Name.first_name}",
@@ -25,7 +25,7 @@ PatientDiagnosis.destroy_all
   Patient.create(patient_params)
 end
 
-20.times do
+100.times do
   admission_params = {
     patient_id: Patient.all.ids.sample,
     hospital: ["Cooper", "Virtua", "Lordes"].sample,
@@ -35,7 +35,7 @@ end
   Admission.create(admission_params)
 end
 
-30.times do
+100.times do
   visit_params = {
     patient_id: Patient.all.ids.sample,
     hospital: ["Cooper", "Virtua", "Lordes"].sample,

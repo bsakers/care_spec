@@ -36,7 +36,6 @@ class PatientShowContainer extends Component {
   }
 
   render() {
-    console.log(this.state)
     let admissions;
     admissions= this.state.admissions.map(admission => {
       return(
