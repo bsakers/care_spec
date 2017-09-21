@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PatientIndexTile from '../components/PatientIndexTile';
 import TableComponent from '../components/TableComponent'
+import TableRow from '../components/TableRow'
 
 class PatientsIndexContainer extends Component {
   constructor(props){
@@ -9,6 +10,7 @@ class PatientsIndexContainer extends Component {
       patients: null,
       selectedCell: null
     }
+    this.toggleSelectedCell=this.toggleSelectedCell.bind(this)
   }
 
   componentDidMount() {
@@ -24,39 +26,75 @@ class PatientsIndexContainer extends Component {
       })
       .then(response => response.json())
       .then(body => {
-
         this.setState({ patients: body });
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  render() {
+  toggleSelectedCell(rowIndex, cellIndex) {
 
-    // if (this.state.selectedCell){
-    //   let patients = this.state.patients[this.state.selectedCell].map(patient => {
-    //     return(
-    //       <PatientIndexTile
-    //         // key={patient.id}
-    //         // id={patient.id}
-    //         // firstName={patient.first_name}
-    //         // middleName={patient.middle_name}
-    //         // lastName={patient.last_name}
-    //         // age={patient.age}
-    //         // sex={patient.sex}
-    //       />
-    //     )
-    //   })
+
+    this.setState({ selectedCell: [rowIndex, cellIndex] })
+
+    // if (cell === this.state.selectedCell) {
+    //   this.setState({ selectedCell: null})
+    // } else {
+    //   this.setState({ selectedCell: cell })
     // }
+  }
+
+  render() {
+    let patients
+    if (this.state.selectedCell){
+      patients = this.state.patients[this.state.selectedCell[0]][this.state.selectedCell[1]].map(patient => {
+        return(
+          <PatientIndexTile
+            key={patient.id}
+            id={patient.id}
+            firstName={patient.first_name}
+            middleName={patient.middle_name}
+            lastName={patient.last_name}
+            age={patient.age}
+            sex={patient.sex}
+          />
+        )
+      })
+    }
+    let rows
+    if (this.state.patients){
+      rows = this.state.patients.map((row, index) => {
+        return(
+          <TableRow
+            key={index}
+            rowIndex={index}
+            row={row}
+            toggleSelectedCell={this.toggleSelectedCell}
+          />
+        )
+      })
+    }
 
 
     return (
-
       <div>
         <h1> Patient Index Page </h1>
-        <TableComponent
-          patientsArray = {this.state.patients}
-        />
-
+        <table>
+          <thead>
+            <tr>
+              <th>ED Visits \ Admissions </th>
+              <th>0</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5+</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
+        {patients}
       </div>
     );
   }
