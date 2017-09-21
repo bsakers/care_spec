@@ -1,3 +1,39 @@
 // Place all the styles related to the patients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "foundation";
+
+.wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+
+}
+
+body {
+  background-color: #5D7697;
+}
+
+table {
+  border: 2px solid #D4D4D4;
+  justify-content: center
+}
+
+td {
+  text-align: center;
+
+}
+
+#row{
+  color: blue
+}
+
+#EdVisitHeader{
+  padding-right: 30px
+}
+
+.PatientIndex{
+  background-color: white;
+}

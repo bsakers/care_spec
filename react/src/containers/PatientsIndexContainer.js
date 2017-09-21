@@ -77,24 +77,37 @@ class PatientsIndexContainer extends Component {
 
     return (
       <div>
-        <h1> Patient Index Page </h1>
-        <table>
+
+
+
+        <div className="wrapper">
+        <table >
           <thead>
             <tr>
-              <th>ED Visits \ Admissions </th>
-              <th>0</th>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              <th>4</th>
-              <th>5+</th>
+              <th colSpan={8}> Admissions </th>
             </tr>
+            <tr id="row">
+              <th rowSpan={7}></th>
+              <th width= "50"> </th>
+              <th width= "100">0</th>
+              <th width= "100">1</th>
+              <th width= "100">2</th>
+              <th width= "100">3</th>
+              <th width= "100">4</th>
+              <th width= "100">5+</th>
+            </tr>
+
+
           </thead>
           <tbody>
+
             {rows}
           </tbody>
         </table>
+        </div>
+        <div className="PatientIndex">
         {patients}
+        </div>
       </div>
     );
   }

@@ -14,10 +14,24 @@ const TableRow= (props) => {
       />
     )
   })
-
+  let rowIndex
+  if (props.rowIndex == 5){
+    rowIndex= "5+"
+  } else {
+    rowIndex= props.rowIndex
+  }
+  let rowSpan
+  if (props.rowIndex == 1) {
+    rowSpan= "ED"
+  } else if(props.rowIndex == 2){
+    rowSpan= "Visits"
+  }
   return(
     <tr>
-    <th>{props.rowIndex}</th>
+    <th id="EdVisitHeader" height="20">
+      {rowSpan}
+    </th>
+    <th id="row">{rowIndex}</th>
       {cells}
     </tr>
   )

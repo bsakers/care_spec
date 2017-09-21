@@ -73,7 +73,7 @@ class PatientShowContainer extends Component {
     })
 
     return (
-      <div>
+      <div className="large-10 large-centered">
         <h3> First Name: {this.state.patient.first_name} </h3>
         <h3> Middle Name: {this.state.patient.middle_name} </h3>
         <h3> Last Name: {this.state.patient.last_name} </h3>
