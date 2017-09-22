@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const AdmissionShowTile= (props) => {
+
   return (
     <div className="admissionShowTile">
-      <p>Hospital: {props.hospital}</p>
-      <p>Admission Date: {props.admissionDate}</p>
-      <p>Length of Stay: {props.lengthOfStay}</p>
+      <Link to={`/admissions/${props.id}`}>
+        <p>Admission Date: {props.admissionDate}</p>
+      </Link>
     </div>
   )
 }

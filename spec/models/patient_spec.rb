@@ -16,5 +16,14 @@ RSpec.describe Patient, type: :model do
 
     it {should have_valid(:sex).when("Female", "Male")}
     it {should_not have_valid(:sex).when(nil, "", "hello")}
+
+    it {should have_valid(:race).when("White")}
+    it {should_not have_valid(:sex).when(nil, "")}
+
+    it {should have_valid(:insurance).when("Aetna")}
+    it {should_not have_valid(:insurance).when(nil, "")}
+
+    it {should have_valid(:home_address).when("123, steet, Philadelphia, PA")}
+    it {should_not have_valid(:home_address).when(nil, "")}
   end
 end

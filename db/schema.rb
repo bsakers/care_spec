@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919152644) do
+ActiveRecord::Schema.define(version: 20170922152152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admission_procedures", force: :cascade do |t|
+    t.integer "admission_id", null: false
+    t.integer "procedure_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "admissions", force: :cascade do |t|
     t.integer "patient_id", null: false
@@ -26,6 +33,13 @@ ActiveRecord::Schema.define(version: 20170919152644) do
 
   create_table "diagnoses", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ed_procedures", force: :cascade do |t|
+    t.integer "ed_visit_id", null: false
+    t.integer "procedure_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +65,16 @@ ActiveRecord::Schema.define(version: 20170919152644) do
     t.string "last_name", null: false
     t.integer "age", null: false
     t.string "sex", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "race", null: false
+    t.string "insurance", null: false
+    t.string "home_address", null: false
+  end
+
+  create_table "procedures", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "cost", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

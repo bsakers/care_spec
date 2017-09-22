@@ -87,6 +87,9 @@ class PatientShowContainer extends Component {
               lastName={this.state.patient.last_name}
               age={this.state.patient.age}
               sex={this.state.patient.sex}
+              race={this.state.patient.race}
+              insurance={this.state.patient.insurance}
+              homeAddress={this.state.patient.home_address}
             />
           </div>
           <div className="large-3 columns patientDiagnoses">Diagnoses

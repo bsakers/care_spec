@@ -21,6 +21,9 @@ PatientDiagnosis.destroy_all
     last_name: "#{Faker::Name.last_name}",
     age: rand(99),
     sex: ["Male", "Female"].sample,
+    race: ["American Indian", "Asian", "African American", "Hispanic/Latino", "Caucasian"].sample,
+    insurance: ["Medicaid", "Medicare", "UnitedHealth", "Humana", "Aetna", "Kaiser"].sample,
+    home_address: "#{Faker::Address.street_address}, Philadelphia, PA"
   }
   Patient.create(patient_params)
 end
@@ -60,4 +63,28 @@ end
     diagnosis_id: Diagnosis.all.ids.sample
   }
   PatientDiagnosis.create(pd_params)
+end
+
+["Upper GI endoscopy", "Cataract surgery", "Colonoscopy", "Lesion removal",
+"Lumbar puncture", "Spinal fusion", "Knee replacement", "Hip replacement",
+"Caesarean section", "Heart valve procedure", "Appendectomy", "hysterectomy",
+"Coronary artery bypass graft", "MRI Scan", "CAT scan", "Arthroscopy", "Mammogram",
+"Echocardiogram", "Sleep Study", "Flu Shot"].each do|procedure|
+  Procedure.create(name: procedure, cost: rand(200..5000))
+end
+
+30.times do
+  procedure_params = {
+    procedure_id: Procedure.all.ids.sample,
+    admission_id: Admission.all.ids.sample
+  }
+  AdmissionProcedure.create(procedure_params)
+end
+
+30.times do
+  procedure_params = {
+    procedure_id: Procedure.all.ids.sample,
+    ed_visit_id: Admission.all.ids.sample
+  }
+  EdProcedure.create(procedure_params)
 end

@@ -12,15 +12,28 @@
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/api/v1/patients_controller.rb": [
         1,
         1,
-        1,
-        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
         null,
         null,
+        0,
+        null,
+        null,
+        null,
         1,
         0,
         0,
         0,
         0,
+        0,
+        null,
         null,
         null,
         null,
@@ -58,6 +71,7 @@
       "/Users/brianakers/challenges/healthcare_utilization/app/models/diagnosis.rb": [
         1,
         1,
+        1,
         null,
         1,
         null
@@ -82,11 +96,20 @@
         1,
         1,
         1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/brianakers/challenges/healthcare_utilization/app/models/procedure.rb": [
+        1,
+        null,
         null,
         1,
         1,
-        1,
-        null,
         null
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/channels/application_cable/channel.rb": [
@@ -107,6 +130,11 @@
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/patients_controller.rb": [
         0,
+        0,
+        0,
+        null,
+        0,
+        0,
         0
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/static_pages_controller.rb": [
@@ -124,6 +152,6 @@
         0
       ]
     },
-    "timestamp": 1505835930
+    "timestamp": 1506093639
   }
 }

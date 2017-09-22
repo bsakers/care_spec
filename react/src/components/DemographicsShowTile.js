@@ -8,9 +8,9 @@ const DemographicsShowTile= (props) => {
       <p>Last Name: {props.lastName}</p>
       <p>Age: {props.age}</p>
       <p>Sex: {props.sex}</p>
-      <p>Ethnicity: </p>
-      <p>Insurance: </p>
-      <p>Home Address:</p>
+      <p>Race: {props.race}</p>
+      <p>Insurance: {props.insurance}</p>
+      <p>Home Address: {props.homeAddress}</p>
     </div>
   )
 }

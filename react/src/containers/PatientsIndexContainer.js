@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PatientIndexTile from '../components/PatientIndexTile';
-import TableComponent from '../components/TableComponent'
 import TableRow from '../components/TableRow'
 
 class PatientsIndexContainer extends Component {
