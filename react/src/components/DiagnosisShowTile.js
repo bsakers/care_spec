@@ -2,8 +2,8 @@ import React from 'react';
 
 const DiagnosisShowTile= (props) => {
   return (
-    <div className="DiagnosisShowTile">
-      <p>Diagnosis: {props.name}</p>
+    <div className="diagnosisShowTile">
+      <p>{props.name}</p>
     </div>
   )
 }

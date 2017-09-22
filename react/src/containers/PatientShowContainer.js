@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AdmissionShowTile from '../components/AdmissionShowTile'
 import EdVisitShowTile from '../components/EdVisitShowTile'
 import DiagnosisShowTile from '../components/DiagnosisShowTile'
+import DemographicsShowTile from '../components/DemographicsShowTile'
 
 class PatientShowContainer extends Component {
   constructor(props){
@@ -36,6 +37,8 @@ class PatientShowContainer extends Component {
   }
 
   render() {
+
+
     let admissions;
     admissions= this.state.admissions.map(admission => {
       return(
@@ -73,13 +76,30 @@ class PatientShowContainer extends Component {
     })
 
     return (
-      <div className="large-10 large-centered">
-        <h3> First Name: {this.state.patient.first_name} </h3>
-        <h3> Middle Name: {this.state.patient.middle_name} </h3>
-        <h3> Last Name: {this.state.patient.last_name} </h3>
-        {admissions}
-        {edVisits}
-        {diagnoses}
+      <div className="PatientShow">
+        <div className = "row expanded">
+          <div className="large-3 columns patientInfo">Patient Demographics
+            <DemographicsShowTile
+              key={this.state.patient.id}
+              id={this.state.patient.id}
+              firstName={this.state.patient.first_name}
+              middleName={this.state.patient.middle_name}
+              lastName={this.state.patient.last_name}
+              age={this.state.patient.age}
+              sex={this.state.patient.sex}
+            />
+          </div>
+          <div className="large-3 columns patientDiagnoses">Diagnoses
+            {diagnoses}
+          </div>
+          <div className="large-3 columns patientVisits">ED Visits
+            {edVisits}
+          </div>
+          <div className="large-3 columns patientAdmissions">Admissions
+            {admissions}
+          </div>
+        </div>
+
       </div>
     );
   }

@@ -77,37 +77,40 @@ class PatientsIndexContainer extends Component {
 
     return (
       <div>
-
-
-
-        <div className="wrapper">
-        <table >
+        <table className="unstriped">
           <thead>
             <tr>
-              <th colSpan={8}> Admissions </th>
+              <th className="admissionHeader" rowSpan={2} colSpan={2}></th>
+              <th className="admissionHeader" colSpan={8}> Admissions </th>
             </tr>
-            <tr id="row">
-              <th rowSpan={7}></th>
-              <th width= "50"> </th>
-              <th width= "100">0</th>
-              <th width= "100">1</th>
-              <th width= "100">2</th>
-              <th width= "100">3</th>
-              <th width= "100">4</th>
-              <th width= "100">5+</th>
+            <tr>
+              <th className="admissionHeader" width= "100">0</th>
+              <th className="admissionHeader" width= "100">1</th>
+              <th className="admissionHeader" width= "100">2</th>
+              <th className="admissionHeader" width= "100">3</th>
+              <th className="admissionHeader" width= "100">4</th>
+              <th className="admissionHeader" width= "100">5+</th>
             </tr>
-
-
           </thead>
           <tbody>
-
+            <tr>
+              <th className="edHeader" rowSpan={8}>E.D. Visits</th>
+            </tr>
             {rows}
+
           </tbody>
         </table>
-        </div>
+
         <div className="PatientIndex">
-        {patients}
+          <div className="row">
+            <div className="large-3 columns">Last Name</div>
+            <div className="large-3 columns">First Name</div>
+            <div className="large-3 columns">Age</div>
+            <div className="large-3 columns">Sex</div>
+          </div>
+          {patients}
         </div>
+
       </div>
     );
   }

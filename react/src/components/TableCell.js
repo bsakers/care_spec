@@ -6,7 +6,7 @@ const TableCell= (props) => {
   }
 
   return(
-    <td onClick={handleClick}>
+    <td className="dataCell" onClick={handleClick}>
       {props.cell.length}
     </td>
   )

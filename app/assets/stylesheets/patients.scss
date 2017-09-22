@@ -3,37 +3,64 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "foundation";
 
-.wrapper {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-
-}
 
 body {
   background-color: #5D7697;
 }
 
 table {
-  border: 2px solid #D4D4D4;
-  justify-content: center
+  border: 10px solid #D4D4D4;
+  justify-content: center;
+  margin: auto
 }
 
-td {
+.dataCell{
   text-align: center;
-
+  &:hover {
+    background-color: #FFB629;
+    cursor: pointer;
+  }
 }
 
-#row{
-  color: blue
+.row{
+  text-align: center
 }
 
-#EdVisitHeader{
-  padding-right: 30px
+
+.PatientIndex {
+  border: 2px solid #D4D4D4;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 30px;
+  background-color: white
 }
 
-.PatientIndex{
+.expanded{
+  max-width: 100%;
+}
+
+.patientInfo, .patientDiagnoses, .patientVisits, .patientAdmissions{
+  border: 5px solid #D4D4D4;
   background-color: white;
+  height: 500px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.admissionHeader {
+  text-align: center
+}
+
+.edVisitHeader {
+  text-align: center
+}
+
+.edHeader{
+  transform: rotate(270deg);
+}
+
+
+.diagnosisShowTile, .admissionShowTile, .edVisitShowTile, .demographicsShowTile{
+  text-align: left;
+  margin-top: 15px;
 }

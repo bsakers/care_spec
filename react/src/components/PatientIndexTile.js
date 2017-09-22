@@ -3,13 +3,14 @@ import { Link } from 'react-router';
 
 const PatientIndexTile= (props) => {
   return (
-    <div className="small-12 small-centered medium-8 medium-centered PatientIndexTile">
+    <div>
       <Link to={`/patients/${props.id}`}>
-        <h5>{props.firstName}
-        {props.middleName}
-        {props.lastName}
-        {props.age}
-        {props.sex}</h5>
+        <div className="row"> 
+          <div className="large-3 columns">{props.firstName}</div>
+          <div className="large-3 columns">{props.lastName}</div>
+          <div className="large-3 columns">{props.age}</div>
+          <div className="large-3 columns">{props.sex}</div>
+        </div>
       </Link>
     </div>
   )

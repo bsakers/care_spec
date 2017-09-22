@@ -2,7 +2,7 @@ import React from 'react';
 
 const AdmissionShowTile= (props) => {
   return (
-    <div className="AdmissionShowTile">
+    <div className="admissionShowTile">
       <p>Hospital: {props.hospital}</p>
       <p>Admission Date: {props.admissionDate}</p>
       <p>Length of Stay: {props.lengthOfStay}</p>

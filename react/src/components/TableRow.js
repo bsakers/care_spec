@@ -20,18 +20,11 @@ const TableRow= (props) => {
   } else {
     rowIndex= props.rowIndex
   }
-  let rowSpan
-  if (props.rowIndex == 1) {
-    rowSpan= "ED"
-  } else if(props.rowIndex == 2){
-    rowSpan= "Visits"
-  }
+
   return(
     <tr>
-    <th id="EdVisitHeader" height="20">
-      {rowSpan}
-    </th>
-    <th id="row">{rowIndex}</th>
+
+    <th className="edVisitHeader">{rowIndex}</th>
       {cells}
     </tr>
   )
