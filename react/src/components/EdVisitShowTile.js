@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const EdVisitShowTile= (props) => {
   return (
     <div className="edVisitShowTile">
-      <p>Hospital: {props.hospital}</p>
-      <p>Visit Date: {props.visitDate}</p>
+      <Link to={`/ed_visits/${props.id}`}>
+        <p>Visit Date: {props.visitDate}</p>
+      </Link>
     </div>
   )
 }

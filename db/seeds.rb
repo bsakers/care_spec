@@ -73,7 +73,7 @@ end
   Procedure.create(name: procedure, cost: rand(200..5000))
 end
 
-30.times do
+200.times do
   procedure_params = {
     procedure_id: Procedure.all.ids.sample,
     admission_id: Admission.all.ids.sample
@@ -81,7 +81,7 @@ end
   AdmissionProcedure.create(procedure_params)
 end
 
-30.times do
+150.times do
   procedure_params = {
     procedure_id: Procedure.all.ids.sample,
     ed_visit_id: Admission.all.ids.sample

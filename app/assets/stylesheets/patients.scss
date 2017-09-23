@@ -39,7 +39,7 @@ table {
   max-width: 100%;
 }
 
-.patientInfo, .patientDiagnoses, .patientVisits, .patientAdmissions, .admissionInfoTile, .proceduresInfoTile{
+.patientInfo, .patientDiagnoses, .patientVisits, .edVisitInfoTile, .patientAdmissions, .admissionInfoTile, .proceduresInfoTile{
   border: 5px solid #D4D4D4;
   background-color: white;
   height: 500px;
@@ -60,7 +60,11 @@ table {
 }
 
 
-.diagnosisShowTile, .admissionInfo,.admissionShowTile, .edVisitShowTile, .procedureShowTile, .demographicsShowTile{
+.diagnosisShowTile, .visitInfo, .admissionInfo,.admissionShowTile, .edVisitShowTile, .procedureShowTile, .demographicsShowTile{
   text-align: left;
   margin-top: 15px;
+}
+
+.procedureHead, .costHead{
+  text-decoration: underline;
 }

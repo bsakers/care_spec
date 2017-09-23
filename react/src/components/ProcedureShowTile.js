@@ -4,13 +4,11 @@ const ProcedureShowTile= (props) => {
 
   return (
     <div className="row">
-      <div className="large-4 columns procedureList">
-        <p>Procedure: </p>
+      <div className="large-5 columns procedureList">
         <p>{props.name}</p>
 
       </div>
-      <div className="large-4 columns costList">
-        <p>Cost: $</p>
+      <div className="large-5 columns costList">
         <p>{props.cost}</p>
       </div>
     </div>
