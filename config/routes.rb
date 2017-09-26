@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :patients, :admissions, :ed_visits
+      resources :patients, :admissions, :ed_visits, :cost_curve, :diagnoses_chart
     end
   end
 end

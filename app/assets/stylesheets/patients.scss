@@ -14,6 +14,18 @@ table {
   margin: auto
 }
 
+h4 {
+  color: #5D7697
+}
+
+.costCurve{
+  border: 10px solid #D4D4D4;
+}
+
+.costCurve text{
+  color: red
+}
+
 .dataCell{
   text-align: center;
   &:hover {
@@ -32,6 +44,7 @@ table {
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 30px;
+  margin-bottom: 30px;
   background-color: white
 }
 
@@ -62,9 +75,24 @@ table {
 
 .diagnosisShowTile, .visitInfo, .admissionInfo,.admissionShowTile, .edVisitShowTile, .procedureShowTile, .demographicsShowTile{
   text-align: left;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .procedureHead, .costHead{
   text-decoration: underline;
+}
+
+.xAxis{
+  padding-left: 20px;
+  margin-top: 150px;
+  padding-right: 0px;
+  color: #D4D4D4;
+}
+
+.yAxis{
+  color: #D4D4D4;
+}
+
+.diseaseStateTile{
+  margin-top: 50px;
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PatientIndexTile from '../components/PatientIndexTile';
-import TableRow from '../components/TableRow'
+import TableRow from '../components/TableRow';
+import CostCurveTile from '../components/CostCurveTile';
+import DiagnosesChartTile from '../components/DiagnosesChartTile'
 
 class PatientsIndexContainer extends Component {
   constructor(props){
@@ -96,7 +98,6 @@ class PatientsIndexContainer extends Component {
               <th className="edHeader" rowSpan={8}>E.D. Visits</th>
             </tr>
             {rows}
-
           </tbody>
         </table>
 
@@ -110,6 +111,18 @@ class PatientsIndexContainer extends Component {
           {patients}
         </div>
 
+        <div className="row costCurve">
+          <div className="row curveData">
+            <div className="large-1 column xAxis">Percentage of Cost</div>
+            <div className="large-11 columns"><CostCurveTile/></div>
+          </div>
+          <div className="row yAxis">
+            <div className="large-12 columns">Percentage of Patients</div>
+          </div>
+        </div>
+        <div className="row diseaseStateTile">
+          <DiagnosesChartTile/>
+        </div>
       </div>
     );
   }
