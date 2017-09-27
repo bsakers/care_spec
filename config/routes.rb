@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'patients#index'
+
+  resources :patients, :admissions, :ed_visits
+
+
+  namespace :api do
+    namespace :v1 do
+      resources :patients, :admissions, :ed_visits, :cost_curve, :diagnoses_chart, :map
+    end
+  end
 end

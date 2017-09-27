@@ -1,0 +1,103 @@
+// Place all the styles related to the patients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "foundation";
+
+
+body {
+  background-color: #5D7697;
+}
+
+table {
+  border: 10px solid #D4D4D4;
+  justify-content: center;
+  margin: auto
+}
+
+h4 {
+  color: #5D7697
+}
+
+.costCurve{
+  border: 10px solid #D4D4D4;
+}
+
+.costCurve text{
+  color: red
+}
+
+.dataCell{
+  text-align: center;
+  &:hover {
+    background-color: #FFB629;
+    cursor: pointer;
+  }
+}
+
+.row{
+  text-align: center
+}
+
+
+.PatientIndex {
+  border: 2px solid #D4D4D4;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white
+}
+
+.expanded{
+  max-width: 100%;
+}
+
+.patientInfo, .patientDiagnoses, .patientVisits, .edVisitInfoTile, .patientAdmissions, .admissionInfoTile, .proceduresInfoTile{
+  border: 5px solid #D4D4D4;
+  background-color: white;
+  height: 500px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.admissionHeader {
+  text-align: center
+}
+
+.edVisitHeader {
+  text-align: center
+}
+
+.edHeader{
+  transform: rotate(270deg);
+}
+
+
+.diagnosisShowTile, .visitInfo, .admissionInfo,.admissionShowTile, .edVisitShowTile, .procedureShowTile, .demographicsShowTile{
+  text-align: left;
+  margin-top: 10px;
+}
+
+.procedureHead, .costHead{
+  text-decoration: underline;
+}
+
+.xAxis{
+  padding-left: 20px;
+  margin-top: 150px;
+  padding-right: 0px;
+  color: #D4D4D4;
+}
+
+.yAxis{
+  color: #D4D4D4;
+}
+
+.diseaseStateTile{
+  margin-top: 50px;
+}
+
+.gmap {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
