@@ -3,6 +3,7 @@ import PatientIndexTile from '../components/PatientIndexTile';
 import TableRow from '../components/TableRow';
 import CostCurveTile from '../components/CostCurveTile';
 import DiagnosesChartTile from '../components/DiagnosesChartTile'
+import GoogleMap from '../components/GoogleMap'
 
 class PatientsIndexContainer extends Component {
   constructor(props){
@@ -122,6 +123,10 @@ class PatientsIndexContainer extends Component {
         </div>
         <div className="row diseaseStateTile">
           <DiagnosesChartTile/>
+        </div>
+
+        <div className="row align-center gmap">
+          <GoogleMap/>
         </div>
       </div>
     );

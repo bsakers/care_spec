@@ -24,6 +24,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-easy-chart": "^0.1.13",
+    "react-gmaps": "^1.6.0",
     "react-router": "^3.0.5",
     "simple-react-tooltip": "^3.2.3",
     "webpack": "^2.6.0"

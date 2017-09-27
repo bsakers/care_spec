@@ -11,6 +11,7 @@ class Api::V1::PatientsController < ApiController
       patients_utilization << row
     end
 
+
     render json: patients_utilization
   end
 

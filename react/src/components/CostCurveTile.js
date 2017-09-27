@@ -33,6 +33,8 @@ class CostCurveTile extends Component {
         axes
         grid
         verticalGrid
+        xDomainRange={[0, 50]}
+        yDomainRange={[0, 50]}
         margin={{top: 30, right: 30, bottom: 30, left: 30}}
         areaColors={['#FFB629']}
         width={800}

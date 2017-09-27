@@ -8,4 +8,5 @@ class Patient < ApplicationRecord
   validates :sex, inclusion: { in: ["Male", "Female"] }
   validates :age, numericality: true
 
+  @testing=[1, 2, 3]
 end

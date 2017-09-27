@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+require 'httparty'
 
 Patient.destroy_all
 Admission.destroy_all
@@ -23,10 +24,35 @@ PatientDiagnosis.destroy_all
     sex: ["Male", "Female"].sample,
     race: ["American Indian", "Asian", "African American", "Hispanic/Latino", "Caucasian"].sample,
     insurance: ["Medicaid", "Medicare", "UnitedHealth", "Humana", "Aetna", "Kaiser"].sample,
-    home_address: "#{Faker::Address.street_address}, Philadelphia, PA"
+    home_address: "#{rand(2..2800)}, Philadelphia, PA"
   }
   Patient.create(patient_params)
 end
+
+# patient = Patient.first
+# firstaddress="1600 Walnut Street, Philadelphia, PA"
+# address=firstaddress.gsub(/\s+/, "+")
+# coordinates=HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=AIzaSyCurjt-cN715NnmWczzEaR80om60qg7XjM")
+# patient.update_attributes({ address_lat: coordinates['results'][0]['geometry']['location']['lat'], address_lng: coordinates['results'][0]['geometry']['location']['lng'] })
+
+
+Patient.all.each do |patient|
+  if patient.address_lat.nil? || patient.lng.nil?
+    address=patient.home_address.gsub(/\s+/, "+")
+    coordinates=HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=AIzaSyCurjt-cN715NnmWczzEaR80om60qg7XjM")
+    patient.update_attributes({ address_lat: coordinates['results'][0]['geometry']['location']['lat'], address_lng: coordinates['results'][0]['geometry']['location']['lng'] })
+  end
+end
+
+
+
+
+# 39.94291 -39.944489 lat
+# -75.165024-  -75.163307 long
+
+
+
+
 
 100.times do
   admission_params = {
