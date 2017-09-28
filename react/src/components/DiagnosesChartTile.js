@@ -83,7 +83,7 @@ class DiagnosesChartTile extends Component {
           mouseOutHandler={this.mouseOutHandler}
           createTooltip={this.createTooltip}
           innerHoleSize={100}
-          data={this.state.data.slice(0, 9)}
+          data={this.state.data.slice(0, 10)}
         />
         {this.createTooltip()}
       </div>

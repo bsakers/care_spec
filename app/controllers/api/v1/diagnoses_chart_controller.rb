@@ -12,7 +12,7 @@ class Api::V1::DiagnosesChartController < ApiController
       }
     end
     diagnoses_data.sort_by! { |k| k[:value] }.reverse!
-    # top_ten_diagnoses = diagnoses_data[0..9]
+
     data={
       patient_count: patient_count,
       patient_diagnoses_count: patient_diagnoses_count,

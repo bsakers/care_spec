@@ -56,7 +56,7 @@ class CostCurveTile extends Component {
     return (
       <div>
         <div className="curveToggle">
-          <a data-dropdown="drop2" aria-controls="drop2" aria-expanded="false">Select a Specific Subset via Cost</a>
+          <a data-dropdown="drop2" aria-controls="drop2" aria-expanded="false">Select Cost Subset</a>
           <div id="drop2" data-dropdown-content className="f-dropdown content" aria-hidden="true" tabIndex="-1">
           <p onClick={this.setCurveParamsAll}>All Patients</p>
           <p onClick={this.setCurveParams50}>Top 50% of Patients</p>
