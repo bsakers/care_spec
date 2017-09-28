@@ -14,6 +14,7 @@ Admission.destroy_all
 EdVisit.destroy_all
 Diagnosis.destroy_all
 PatientDiagnosis.destroy_all
+User.destroy_all
 
 100.times do
   patient_params = {
@@ -39,12 +40,7 @@ Patient.all.each do |patient|
 end
 
 
-
-
-# 39.94291 -39.944489 lat
-# -75.165024-  -75.163307 long
-
-
+User.create(username: "Test", email: "test@email.com", password: "password")
 
 
 
@@ -77,7 +73,7 @@ end
   Diagnosis.create(name: "#{diagnosis}")
 end
 
-30.times do
+60.times do
   pd_params = {
     patient_id: Patient.all.ids.sample,
     diagnosis_id: Diagnosis.all.ids.sample

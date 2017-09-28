@@ -13,14 +13,14 @@ const ToolTip = (props) => {
     padding: '10px'
   }
 
-  let patientPercentage= props.count/props.patientCount* 100
-  let diagnosisPercetange= props.count/props.patientDiagnosesCount
+  let percentOfAll= props.count/props.allPatientCount* 100
+  let percentOfSubset= props.count/props.subsetPatientCount *100
 
   return(
     <div className="tooltip-container" style={divStyle}>
       <span><h4>{props.disease}</h4>
-      Percetage of all Patients: {Math.round(patientPercentage*100)/100}%<br/>
-      Percentage of all Diagnoses: {Math.round(diagnosisPercetange*100)/100}%</span>
+      Percentage of all patients: {Math.round(percentOfAll*100)/100}%<br/>
+      Percentage of this subset: {Math.round(percentOfSubset*100)/100}%</span>
     </div>
   )
 };

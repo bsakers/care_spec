@@ -7,9 +7,13 @@ class DiagnosesChartTile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      patientCount: 0,
-      patientDiagnosesCount: 0,
-      data:[],
+      selectedData: [],
+      allPatientCount: 0,
+      subsetPatientCount: 0,
+      allData:[],
+      fiftyData:[],
+      tenData:[],
+      fiveData:[],
       showToolTip: false,
       top: null,
       left: null,
@@ -19,6 +23,30 @@ class DiagnosesChartTile extends Component {
     this.mouseOverHandler=this.mouseOverHandler.bind(this)
     this.mouseOutHandler=this.mouseOutHandler.bind(this)
     this.createTooltip=this.createTooltip.bind(this)
+    this.setChartParamsAll=this.setChartParamsAll.bind(this)
+    this.setChartParams50=this.setChartParams50.bind(this)
+    this.setChartParams10=this.setChartParams10.bind(this)
+    this.setChartParams5=this.setChartParams5.bind(this)
+  }
+
+  setChartParamsAll(){
+    this.setState({ subsetPatientCount: 100 })
+    this.setState({ selectedData: this.state.allData })
+  }
+
+  setChartParams50(){
+    this.setState({ subsetPatientCount: this.state.allPatientCount/2 })
+    this.setState({ selectedData: this.state.fiftyData })
+  }
+
+  setChartParams10(){
+    this.setState({ subsetPatientCount: this.state.allPatientCount/10 })
+    this.setState({ selectedData: this.state.tenData })
+  }
+
+  setChartParams5(){
+    this.setState({ subsetPatientCount: this.state.allPatientCount/20 })
+    this.setState({ selectedData: this.state.fiveData })
   }
 
   componentDidMount() {
@@ -35,9 +63,13 @@ class DiagnosesChartTile extends Component {
       .then(response => response.json())
       .then(body => {
         this.setState({
-          data: body.diagnoses_data,
-          patientCount: body.patient_count,
-          patientDiagnosesCount: body.patient_diagnoses_count })
+          selectedData: body.all,
+          allData: body.all,
+          fiftyData: body.fifty_percent,
+          tenData: body.ten_percent,
+          fiveData: body.five_percent,
+          allPatientCount: body.patient_count,
+          subsetPatientCount: body.patient_count})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -63,8 +95,8 @@ class DiagnosesChartTile extends Component {
         <ToolTip
           top={this.state.top}
           left={this.state.left}
-          patientCount={this.state.patientCount}
-          patientDiagnosesCount={this.state.patientDiagnosesCount}
+          allPatientCount={this.state.allPatientCount}
+          subsetPatientCount={this.state.subsetPatientCount}
           disease={this.state.key}
           count={this.state.value}
         />
@@ -75,15 +107,23 @@ class DiagnosesChartTile extends Component {
   }
 
   render() {
-
     return (
       <div>
+        <div className="chartToggle">
+          <a data-dropdown="drop3" aria-controls="drop3" aria-expanded="false">Select Cost Subset</a>
+          <div id="drop3" data-dropdown-content className="f-dropdown content" aria-hidden="true" tabIndex="-1">
+          <p onClick={this.setChartParamsAll}>All Patients</p>
+          <p onClick={this.setChartParams50}>Top 50% of Patients</p>
+          <p onClick={this.setChartParams10}>Top 10% of Patients</p>
+          <p onClick={this.setChartParams5}>Top 5% of Patients</p>
+          </div>
+        </div>
         <PieChart
           mouseOverHandler={this.mouseOverHandler}
           mouseOutHandler={this.mouseOutHandler}
           createTooltip={this.createTooltip}
           innerHoleSize={100}
-          data={this.state.data.slice(0, 10)}
+          data={this.state.selectedData.slice(0, 10)}
         />
         {this.createTooltip()}
       </div>
