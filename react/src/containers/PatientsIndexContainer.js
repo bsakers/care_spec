@@ -79,6 +79,9 @@ class PatientsIndexContainer extends Component {
 
     return (
       <div>
+        <div>
+          <h1>Welcome to CareSpec</h1>
+        </div>
         <table className="unstriped">
           <thead>
             <tr>

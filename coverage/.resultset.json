@@ -25,6 +25,8 @@
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/api/v1/patients_controller.rb": [
         1,
+        null,
+        null,
         1,
         null,
         0,
@@ -60,6 +62,7 @@
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/api_controller.rb": [
         1,
+        null,
         null,
         null,
         1,
@@ -151,6 +154,7 @@
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/patients_controller.rb": [
         1,
         1,
+        1,
         null,
         null,
         1,
@@ -170,6 +174,7 @@
         0
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/admissions_controller.rb": [
+        0,
         0,
         0
       ],
@@ -295,6 +300,7 @@
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/ed_visits_controller.rb": [
         0,
+        0,
         0
       ],
       "/Users/brianakers/challenges/healthcare_utilization/app/controllers/static_pages_controller.rb": [
@@ -312,6 +318,6 @@
         0
       ]
     },
-    "timestamp": 1506532025
+    "timestamp": 1506609043
   }
 }
