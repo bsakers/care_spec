@@ -22,6 +22,7 @@ gem 'httparty'
 gem 'faker'
 gem 'jquery-rails'
 gem 'foundation-rails'
+gem 'devise'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -52,6 +53,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   gem 'faker'
+  gem 'valid_attribute'
 end
 
 group :development do

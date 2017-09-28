@@ -29,12 +29,6 @@ PatientDiagnosis.destroy_all
   Patient.create(patient_params)
 end
 
-# patient = Patient.first
-# firstaddress="1600 Walnut Street, Philadelphia, PA"
-# address=firstaddress.gsub(/\s+/, "+")
-# coordinates=HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{address}&key=AIzaSyCurjt-cN715NnmWczzEaR80om60qg7XjM")
-# patient.update_attributes({ address_lat: coordinates['results'][0]['geometry']['location']['lat'], address_lng: coordinates['results'][0]['geometry']['location']['lng'] })
-
 
 Patient.all.each do |patient|
   if patient.address_lat.nil? || patient.lng.nil?

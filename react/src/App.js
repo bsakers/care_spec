@@ -11,8 +11,9 @@ import EdVisitInfoTile from './components/EdVisitInfoTile'
 const App = (props) => {
   return(
     <Router history={browserHistory}>
-      <Route path='/patients' component={NavBar}>
+      <Route path='/' component={NavBar}>
         <IndexRoute component={PatientsIndexContainer} />
+        <Route path='/patients' component={PatientsIndexContainer} />
         <Route path='/patients/:id' component={PatientShowContainer}/>
         <Route path='/admissions/:id' component={AdmissionInfoTile}/>
         <Route path='/ed_visits/:id' component={EdVisitInfoTile}/>
