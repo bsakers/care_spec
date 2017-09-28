@@ -2,28 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "foundation";
-
+@import "https://fonts.googleapis.com/css?family=Mukta";
 
 body {
   background-color: #5D7697;
 }
 
+.welcomeTitle h1{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: #FFB629;
+  font-family: 'Mukta', sans-serif;
+}
+
 table {
   border: 10px solid #D4D4D4;
   justify-content: center;
-  margin: auto
+  margin: auto;
+  margin-top: 20px;
 }
 
 h4 {
   color: #5D7697
 }
 
-.costCurve{
-  border: 10px solid #D4D4D4;
+nav a{
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.costCurve text{
-  color: red
+.costCurve{
+  border: 10px solid #D4D4D4;
 }
 
 .dataCell{
@@ -72,7 +81,6 @@ h4 {
   transform: rotate(270deg);
 }
 
-
 .diagnosisShowTile, .visitInfo, .admissionInfo,.admissionShowTile, .edVisitShowTile, .procedureShowTile, .demographicsShowTile{
   text-align: left;
   margin-top: 10px;
@@ -100,4 +108,33 @@ h4 {
 .gmap {
   margin-top: 100px;
   margin-bottom: 40px;
+}
+
+.signIn{
+  margin-top: 20px;
+  h1{
+    color: #FFB629;
+    font-family: 'Mukta', sans-serif;
+    font-size: 500%;
+  }
+  h3{
+    color: #D4D4D4;
+    padding-bottom: 20px;
+  }
+  input[type="submit"] {
+    background-color: #D4D4D4;
+    cursor: pointer;
+  }
+  label[for="user_email"], label[for="user_password"]{
+    pointer-events: none;
+    font-weight: bold;
+  }
+}
+
+.errorMessages{
+  width: 200px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #D4D4D4;
+  size: 200%
 }

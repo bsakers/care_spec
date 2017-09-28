@@ -4,7 +4,10 @@ import { Link } from 'react-router'
 const NavBar = props => {
   return(
     <div>
-      <Link to='/patients'> HOME </Link>
+      <nav className="top-bar" data-topbar role="navigation">
+        <Link to='/patients'> Home </Link>
+        <a data-method="delete" href='/users/sign_out'> Sign Out </a>
+      </nav>
       {props.children}
     </div>
   )
