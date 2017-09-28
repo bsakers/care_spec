@@ -12,12 +12,37 @@ class Api::V1::DiagnosesChartController < ApiController
       }
     end
     diagnoses_data.sort_by! { |k| k[:value] }.reverse!
-    # top_ten_diagnoses = diagnoses_data[0..9]
+
     data={
       patient_count: patient_count,
       patient_diagnoses_count: patient_diagnoses_count,
       diagnoses_data: diagnoses_data
     }
+
+    # diagnoses= Diagnosis.all
+    # patients_fifty_percent= Patient.all[0..49]
+    # data_fifty_percent =[]
+    # diagnoses.each do |diagnosis|
+    #   count= 0
+    #   patients_fifty_percent.each do |patient|
+    #     if patient.diagnoses.include?(diagnosis)
+    #       count +=1
+    #     end
+    #   end
+    #   data_fifty_percent << {key: diagnosis.name, value: count}
+    # end
+    #
+    # patients_fifty_percent= Patient.all[0..49]
+    # data_fifty_percent =[]
+    # diagnoses.each do |diagnosis|
+    #   count= 0
+    #   patients_fifty_percent.each do |patient|
+    #     if patient.diagnoses.include?(diagnosis)
+    #       count +=1
+    #     end
+    #   end
+    #   data_fifty_percent << {key: diagnosis.name, value: count}
+    # end
 
     render json: data
   end
