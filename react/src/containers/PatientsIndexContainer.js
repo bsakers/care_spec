@@ -82,6 +82,9 @@ class PatientsIndexContainer extends Component {
         <div className="row welcomeTitle">
           <h1>Welcome to CareSpec!</h1>
         </div>
+        <div className="row tableTitle">
+          <h3>Utilzation Matrix</h3>
+        </div>
         <table className="unstriped">
           <thead>
             <tr>
@@ -115,6 +118,9 @@ class PatientsIndexContainer extends Component {
           {patients}
         </div>
 
+        <div className="row costCurveTitle">
+          <h3>Cost Distribution Curve</h3>
+        </div>
         <div className="row costCurve">
           <div className="row curveData">
             <div className="large-1 column xAxis">Percentage of Cost</div>
@@ -124,10 +130,15 @@ class PatientsIndexContainer extends Component {
             <div className="large-12 columns">Percentage of Patients</div>
           </div>
         </div>
-        <div className="row diseaseStateTile">
+        <div className="row diagnosesChartTitle">
+          <h3>Diagnoses Breakdown</h3>
+        </div>
+        <div className="row diagnosesChartTile">
           <DiagnosesChartTile/>
         </div>
-
+        <div className="row mapTitle">
+          <h3>Address Map</h3>
+        </div>
         <div className="row align-center gmap">
           <GoogleMap/>
         </div>
