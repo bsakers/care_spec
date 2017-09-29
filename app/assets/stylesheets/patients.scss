@@ -147,6 +147,17 @@ nav a{
     pointer-events: none;
     font-weight: bold;
   }
+  .testUserPassword {
+    margin-top: 70px;
+    h3{
+      padding-bottom: 0px;
+      font-style: italic;
+    }
+    h4{
+      color: #D4D4D4;
+    }
+
+  }
 }
 
 .errorMessages{
