@@ -30,7 +30,7 @@ class DiagnosesChartTile extends Component {
   }
 
   setChartParamsAll(){
-    this.setState({ subsetPatientCount: 100 })
+    this.setState({ subsetPatientCount: this.state.allPatientCount })
     this.setState({ selectedData: this.state.allData })
   }
 
@@ -91,6 +91,12 @@ class DiagnosesChartTile extends Component {
 
   createTooltip() {
     if (this.state.showToolTip) {
+      let allPatientValue
+      this.state.allData.forEach ((diagnosis)=> {
+        if (diagnosis.key == this.state.key) {
+          allPatientValue = diagnosis.value
+        }
+      })
       return (
         <ToolTip
           top={this.state.top}
@@ -98,7 +104,8 @@ class DiagnosesChartTile extends Component {
           allPatientCount={this.state.allPatientCount}
           subsetPatientCount={this.state.subsetPatientCount}
           disease={this.state.key}
-          count={this.state.value}
+          value={this.state.value}
+          allPatientValue={allPatientValue}
         />
 
       );

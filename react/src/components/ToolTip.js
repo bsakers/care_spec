@@ -13,8 +13,8 @@ const ToolTip = (props) => {
     padding: '10px'
   }
 
-  let percentOfAll= props.count/props.allPatientCount* 100
-  let percentOfSubset= props.count/props.subsetPatientCount *100
+  let percentOfAll= props.allPatientValue/props.allPatientCount* 100
+  let percentOfSubset= props.value/props.subsetPatientCount *100
 
   return(
     <div className="tooltip-container" style={divStyle}>

@@ -1,17 +1,6 @@
 class Api::V1::DiagnosesChartController < ApiController
   def index
-    # patient_count = Patient.all.length
-    # patient_diagnoses_count= PatientDiagnosis.all.length
-    # diagnoses = Diagnosis.all
-    # diagnoses_data= []
-    #
-    # data={
-    #   patient_count: patient_count,
-    #   patient_diagnoses_count: patient_diagnoses_count,
-    #   diagnoses_data: diagnoses_data
-    # }
-    #
-    # render json: data
+
 
     patients= Patient.all
     patients_sorted = patients.sort_by { |k| k[:cost] }.reverse
