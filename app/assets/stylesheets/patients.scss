@@ -15,11 +15,20 @@ body {
   font-family: 'Mukta', sans-serif;
 }
 
+.tableTitle, .costCurveTitle, .diagnosesChartTitle, .mapTitle{
+  h3 {
+    color: #D4D4D4;
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-family: 'Mukta', sans-serif;
+  }
+}
+
 table {
   border: 10px solid #D4D4D4;
   justify-content: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 h4 {
@@ -33,6 +42,8 @@ nav a{
 
 .costCurve{
   border: 10px solid #D4D4D4;
+  margin-top: 10px;
+  margin-bottom: 80px;
 }
 
 .dataCell{
@@ -53,7 +64,7 @@ nav a{
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   background-color: white
 }
 
@@ -101,13 +112,20 @@ nav a{
   color: #D4D4D4;
 }
 
-.diseaseStateTile{
-  margin-top: 50px;
+.diagnosesChartTile{
+  margin-top: 10px;
+  svg {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
 }
 
 .gmap {
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 40px;
+  .map {
+    margin-top: 20px;
+  }
 }
 
 .signIn{
@@ -137,4 +155,15 @@ nav a{
   margin-top: 20px;
   color: #D4D4D4;
   size: 200%
+}
+
+.curveToggle, .chartToggle, .mapToggle{
+  a{
+    font-weight: bold;
+    color: #FFB629
+  }
+  p{
+    color: #5D7697;
+    cursor: pointer;
+  }
 }

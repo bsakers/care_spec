@@ -73,7 +73,7 @@ end
   Diagnosis.create(name: "#{diagnosis}")
 end
 
-30.times do
+60.times do
   pd_params = {
     patient_id: Patient.all.ids.sample,
     diagnosis_id: Diagnosis.all.ids.sample

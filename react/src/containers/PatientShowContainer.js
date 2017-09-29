@@ -76,7 +76,7 @@ class PatientShowContainer extends Component {
     })
 
     return (
-      <div className="PatientShow">
+      <div className="patientShow">
         <div className = "row expanded">
           <div className="large-3 columns patientInfo">Patient Demographics
             <DemographicsShowTile
