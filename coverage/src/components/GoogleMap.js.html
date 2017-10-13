@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/GoogleMap.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> GoogleMap.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.97% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>40/69</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.57% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">13.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/30</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">7 statements, 9 functions, 17 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
+&nbsp;
+class GoogleMap extends React.Component {
+<span class="fstat-no" title="function not covered" >  constructor(props)<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span></span></span>
+    super(props);
+<span class="cstat-no" title="statement not covered" >    t</span>his.state = {
+      allCoordinates: [],
+      selectedCoordinates: [],
+    }
+<span class="cstat-no" title="statement not covered" >    t</span>his.setMapParamsAll=this.setMapParamsAll.bind(this)
+<span class="cstat-no" title="statement not covered" >    t</span>his.setMapParams50=this.setMapParams50.bind(this)
+<span class="cstat-no" title="statement not covered" >    t</span>his.setMapParams10=this.setMapParams10.bind(this)
+<span class="cstat-no" title="statement not covered" >    t</span>his.setMapParams5=this.setMapParams5.bind(this)
+  }
+  setMapParamsAll(){
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedCoordinates: this.state.allCoordinates })
+  }
+&nbsp;
+  setMapParams50(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedCoordinates: this.state.allCoordinates.slice(0, 50) })
+  }
+&nbsp;
+  setMapParams10(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedCoordinates: this.state.allCoordinates.slice(0, 10) })
+  }
+&nbsp;
+  setMapParams5(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedCoordinates: this.state.allCoordinates.slice(0, 5) })
+  }
+&nbsp;
+  componentDidMount() <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    f</span>etch(`/api/v1/map`)
+      .then(<span class="fstat-no" title="function not covered" >response =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (response.ok) {</span>
+<span class="cstat-no" title="statement not covered" >          r</span>eturn response;
+        } else {
+<span class="cstat-no" title="statement not covered" >          l</span>et errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+<span class="cstat-no" title="statement not covered" >          t</span>hrow(error);
+        }
+      })
+      .then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span>esponse =&gt; response.json())
+      .then(<span class="fstat-no" title="function not covered" >body =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        t</span>his.setState({ allCoordinates: body })
+<span class="cstat-no" title="statement not covered" >        t</span>his.setState({ selectedCoordinates: body })
+      })
+      .catch(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >e</span></span>rror =&gt; console.error(`Error in fetch: ${error.message}`));
+  }
+&nbsp;
+&nbsp;
+  onMapCreated(map) {
+<span class="cstat-no" title="statement not covered" >    m</span>ap.setOptions({
+      disableDefaultUI: true
+    });
+  }
+&nbsp;
+  render() {
+<span class="cstat-no" title="statement not covered" >    c</span>onst coords = {
+      lat: 39.9494894,
+      lng: -75.1677764
+    };
+<span class="cstat-no" title="statement not covered" >    c</span>onst params = {v: '3.exp', key: 'AIzaSyCurjt-cN715NnmWczzEaR80om60qg7XjM'};
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    l</span>et selectedCoordinates
+<span class="cstat-no" title="statement not covered" >    s</span>electedCoordinates= this.state.selectedCoordinates.map(<span class="fstat-no" title="function not covered" >(coordinate, index)=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >      r</span>eturn(
+        &lt;Marker
+          key={index}
+          lat={coordinate.lat}
+          lng={coordinate.lng} /&gt;
+      )
+    })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    r</span>eturn (
+      &lt;div&gt;
+        &lt;div className="mapToggle"&gt;
+          &lt;a data-dropdown="drop4" aria-controls="drop4" aria-expanded="false"&gt;Select Cost Subset&lt;/a&gt;
+          &lt;div id="drop4" data-dropdown-content className="f-dropdown content" aria-hidden="true" tabIndex="-1"&gt;
+          &lt;p onClick={this.setMapParamsAll}&gt;All Patients&lt;/p&gt;
+          &lt;p onClick={this.setMapParams50}&gt;Top 50% of Patients&lt;/p&gt;
+          &lt;p onClick={this.setMapParams10}&gt;Top 10% of Patients&lt;/p&gt;
+          &lt;p onClick={this.setMapParams5}&gt;Top 5% of Patients&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;Gmaps className="map"
+          width={'1000px'}
+          height={'400px'}
+          lat={coords.lat}
+          lng={coords.lng}
+          zoom={13}
+          loadingMessage={'Loading'}
+          params={params}
+          onMapCreated={this.onMapCreated}&gt;
+          {selectedCoordinates}
+        &lt;/Gmaps&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default GoogleMap;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 12 2017 20:19:03 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
