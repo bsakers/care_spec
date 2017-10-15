@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/containers/PatientsIndexContainer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/containers/</a> PatientsIndexContainer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.59% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>70/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.87% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>37/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>26/30</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">4 statements, 1 function, 12 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import PatientIndexTile from '../components/PatientIndexTile';
+import TableRow from '../components/TableRow';
+import CostCurveTile from '../components/CostCurveTile';
+import DiagnosesChartTile from '../components/DiagnosesChartTile'
+import GoogleMap from '../components/GoogleMap'
+&nbsp;
+class PatientsIndexContainer extends Component {
+  constructor(props)<span class="branch-1 cbranch-no" title="branch not covered" >{</span>
+    super(props);
+    this.state = {
+      patients: null,
+      selectedCell: null
+    }
+    this.toggleSelectedCell=this.toggleSelectedCell.bind(this)
+  }
+&nbsp;
+  componentDidMount() {
+    fetch('api/v1/patients/')
+      .then(response =&gt; {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (response.ok) {
+<span class="cstat-no" title="statement not covered" >          r</span>eturn response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span>esponse =&gt; response.json())
+      .then(<span class="fstat-no" title="function not covered" >body =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        t</span>his.setState({ patients: body });
+      })
+      .catch(error =&gt; console.error(`Error in fetch: ${error.message}`));
+  }
+&nbsp;
+  toggleSelectedCell(rowIndex, cellIndex) {
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedCell: [rowIndex, cellIndex] })
+  }
+&nbsp;
+  render() {
+    let patients
+    if (this.state.selectedCell){
+      patients = this.state.patients[this.state.selectedCell[0]][this.state.selectedCell[1]].map(patient =&gt; {
+        return(
+          &lt;PatientIndexTile
+            key={patient.id}
+            id={patient.id}
+            firstName={patient.first_name}
+            middleName={patient.middle_name}
+            lastName={patient.last_name}
+            age={patient.age}
+            sex={patient.sex}
+          /&gt;
+        )
+      })
+    }
+    let rows
+    if (this.state.patients){
+      rows = this.state.patients.map((row, index) =&gt; {
+        return(
+          &lt;TableRow
+            key={index}
+            rowIndex={index}
+            row={row}
+            toggleSelectedCell={this.toggleSelectedCell}
+          /&gt;
+        )
+      })
+    }
+&nbsp;
+&nbsp;
+    return (
+      &lt;div&gt;
+        &lt;div className="row welcomeTitle"&gt;
+          &lt;h1&gt;Welcome to CareSpec!&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div className="row tableTitle"&gt;
+          &lt;h3&gt;Utilzation Matrix&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;table className="unstriped"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th className="admissionHeader" rowSpan={2} colSpan={2}&gt;&lt;/th&gt;
+              &lt;th className="admissionHeader" colSpan={8}&gt; Admissions &lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th className="admissionHeader" width= "100"&gt;0&lt;/th&gt;
+              &lt;th className="admissionHeader" width= "100"&gt;1&lt;/th&gt;
+              &lt;th className="admissionHeader" width= "100"&gt;2&lt;/th&gt;
+              &lt;th className="admissionHeader" width= "100"&gt;3&lt;/th&gt;
+              &lt;th className="admissionHeader" width= "100"&gt;4&lt;/th&gt;
+              &lt;th className="admissionHeader" width= "100"&gt;5+&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;th className="edHeader" rowSpan={8}&gt;E.D. Visits&lt;/th&gt;
+            &lt;/tr&gt;
+            {rows}
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+&nbsp;
+        &lt;div className="PatientIndex"&gt;
+          &lt;div className="row"&gt;
+            &lt;div className="large-3 columns"&gt;Last Name&lt;/div&gt;
+            &lt;div className="large-3 columns"&gt;First Name&lt;/div&gt;
+            &lt;div className="large-3 columns"&gt;Age&lt;/div&gt;
+            &lt;div className="large-3 columns"&gt;Sex&lt;/div&gt;
+          &lt;/div&gt;
+          {patients}
+        &lt;/div&gt;
+&nbsp;
+        &lt;div className="row costCurveTitle"&gt;
+          &lt;h3&gt;Cost Distribution Curve&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div className="row costCurve"&gt;
+          &lt;div className="row curveData"&gt;
+            &lt;div className="large-1 column xAxis"&gt;Percentage of Cost&lt;/div&gt;
+            &lt;div className="large-11 columns"&gt;&lt;CostCurveTile/&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div className="row yAxis"&gt;
+            &lt;div className="large-12 columns"&gt;Percentage of Patients&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className="row diagnosesChartTitle"&gt;
+          &lt;h3&gt;Diagnoses Breakdown&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div className="row diagnosesChartTile"&gt;
+          &lt;DiagnosesChartTile/&gt;
+        &lt;/div&gt;
+        &lt;div className="row mapTitle"&gt;
+          &lt;h3&gt;Address Map&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div className="row align-center gmap"&gt;
+          &lt;GoogleMap/&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default PatientsIndexContainer;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 14 2017 18:15:27 GMT-0600 (MDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

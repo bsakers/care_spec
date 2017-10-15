@@ -34,15 +34,7 @@ class PatientsIndexContainer extends Component {
   }
 
   toggleSelectedCell(rowIndex, cellIndex) {
-
-
     this.setState({ selectedCell: [rowIndex, cellIndex] })
-
-    // if (cell === this.state.selectedCell) {
-    //   this.setState({ selectedCell: null})
-    // } else {
-    //   this.setState({ selectedCell: cell })
-    // }
   }
 
   render() {
