@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/CostCurveTile.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> CostCurveTile.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>55/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.29% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>33/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.47% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>17/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/27</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">4 statements, 4 functions, 13 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import {AreaChart} from 'react-easy-chart';
+&nbsp;
+class CostCurveTile extends Component {
+  constructor(props)<span class="branch-1 cbranch-no" title="branch not covered" >{</span>
+    super(props);
+    this.state = {
+      data:[],
+      xParams: 100,
+      yParams: 100,
+    }
+    this.setCurveParamsAll=this.setCurveParamsAll.bind(this)
+    this.setCurveParams50=this.setCurveParams50.bind(this)
+    this.setCurveParams10=this.setCurveParams10.bind(this)
+    this.setCurveParams5=this.setCurveParams5.bind(this)
+  }
+  setCurveParamsAll(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ xParams: 100 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ yParams: 100 })
+  }
+&nbsp;
+  setCurveParams50(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ xParams: 50 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ yParams: 85 })
+  }
+&nbsp;
+  setCurveParams10(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ xParams: 10 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ yParams: 30 })
+  }
+&nbsp;
+  setCurveParams5(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ xParams: 5 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ yParams: 20 })
+  }
+&nbsp;
+  componentDidMount() {
+    fetch(`/api/v1/cost_curve`)
+      .then(response =&gt; {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (response.ok) {
+<span class="cstat-no" title="statement not covered" >          r</span>eturn response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span>esponse =&gt; response.json())
+      .then(<span class="fstat-no" title="function not covered" >body =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        t</span>his.setState({ data: body })
+      })
+      .catch(error =&gt; console.error(`Error in fetch: ${error.message}`));
+  }
+&nbsp;
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;div className="curveToggle"&gt;
+          &lt;a data-dropdown="drop2" aria-controls="drop2" aria-expanded="false"&gt;Select Cost Subset&lt;/a&gt;
+          &lt;div id="drop2" data-dropdown-content className="f-dropdown content" aria-hidden="true" tabIndex="-1"&gt;
+          &lt;p onClick={this.setCurveParamsAll}&gt;All Patients&lt;/p&gt;
+          &lt;p onClick={this.setCurveParams50}&gt;Top 50% of Patients&lt;/p&gt;
+          &lt;p onClick={this.setCurveParams10}&gt;Top 10% of Patients&lt;/p&gt;
+          &lt;p onClick={this.setCurveParams5}&gt;Top 5% of Patients&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;AreaChart
+          axes
+          grid
+          verticalGrid
+          xDomainRange={[0, this.state.xParams]}
+          yDomainRange={[0, this.state.yParams]}
+          margin={{top: 30, right: 30, bottom: 30, left: 30}}
+          areaColors={['#FFB629']}
+          width={800}
+          height={400}
+          data={[
+            this.state.data
+          ]}
+        /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default CostCurveTile;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 14 2017 18:15:27 GMT-0600 (MDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

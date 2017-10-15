@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/DiagnosesChartTile.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> DiagnosesChartTile.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.31% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>65/83</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.18% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>34/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.96% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.14% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>24/42</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">4 statements, 6 functions, 12 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import {PieChart} from 'react-easy-chart';
+import ReactTooltip from 'simple-react-tooltip';
+import ToolTip from './ToolTip'
+&nbsp;
+class DiagnosesChartTile extends Component {
+  constructor(props)<span class="branch-1 cbranch-no" title="branch not covered" >{</span>
+    super(props);
+    this.state = {
+      selectedData: [],
+      allPatientCount: 0,
+      subsetPatientCount: 0,
+      allData:[],
+      fiftyData:[],
+      tenData:[],
+      fiveData:[],
+      showToolTip: false,
+      top: null,
+      left: null,
+      value: null,
+      key: null
+    }
+    this.mouseOverHandler=this.mouseOverHandler.bind(this)
+    this.mouseOutHandler=this.mouseOutHandler.bind(this)
+    this.createTooltip=this.createTooltip.bind(this)
+    this.setChartParamsAll=this.setChartParamsAll.bind(this)
+    this.setChartParams50=this.setChartParams50.bind(this)
+    this.setChartParams10=this.setChartParams10.bind(this)
+    this.setChartParams5=this.setChartParams5.bind(this)
+  }
+&nbsp;
+  setChartParamsAll(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ subsetPatientCount: this.state.allPatientCount })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedData: this.state.allData })
+  }
+&nbsp;
+  setChartParams50(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ subsetPatientCount: this.state.allPatientCount/2 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedData: this.state.fiftyData })
+  }
+&nbsp;
+  setChartParams10(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ subsetPatientCount: this.state.allPatientCount/10 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedData: this.state.tenData })
+  }
+&nbsp;
+  setChartParams5(){
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ subsetPatientCount: this.state.allPatientCount/20 })
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({ selectedData: this.state.fiveData })
+  }
+&nbsp;
+  componentDidMount() {
+    fetch(`/api/v1/diagnoses_chart`)
+      .then(response =&gt; {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (response.ok) {
+<span class="cstat-no" title="statement not covered" >          r</span>eturn response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span>esponse =&gt; response.json())
+      .then(<span class="fstat-no" title="function not covered" >body =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        t</span>his.setState({
+          selectedData: body.all,
+          allData: body.all,
+          fiftyData: body.fifty_percent,
+          tenData: body.ten_percent,
+          fiveData: body.five_percent,
+          allPatientCount: body.patient_count,
+          subsetPatientCount: body.patient_count})
+      })
+      .catch(error =&gt; console.error(`Error in fetch: ${error.message}`));
+  }
+&nbsp;
+&nbsp;
+  mouseOverHandler(d, e) {
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({
+      showToolTip: true,
+      top: e.y,
+      left: e.x,
+      value: d.value,
+      key: d.data.key})
+  }
+&nbsp;
+&nbsp;
+  mouseOutHandler() {
+<span class="cstat-no" title="statement not covered" >    t</span>his.setState({showToolTip: false});
+  }
+&nbsp;
+  createTooltip() {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.showToolTip) {
+<span class="cstat-no" title="statement not covered" >      l</span>et allPatientValue
+<span class="cstat-no" title="statement not covered" >      t</span>his.state.allData.forEach (<span class="fstat-no" title="function not covered" >(diagnosis)=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (diagnosis.key == this.state.key) {</span>
+<span class="cstat-no" title="statement not covered" >          a</span>llPatientValue = diagnosis.value
+        }
+      })
+<span class="cstat-no" title="statement not covered" >      r</span>eturn (
+        &lt;ToolTip
+          top={this.state.top}
+          left={this.state.left}
+          allPatientCount={this.state.allPatientCount}
+          subsetPatientCount={this.state.subsetPatientCount}
+          disease={this.state.key}
+          value={this.state.value}
+          allPatientValue={allPatientValue}
+        /&gt;
+&nbsp;
+      );
+    }
+    return false;
+  }
+&nbsp;
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;div className="chartToggle"&gt;
+          &lt;a data-dropdown="drop3" aria-controls="drop3" aria-expanded="false"&gt;Select Cost Subset&lt;/a&gt;
+          &lt;div id="drop3" data-dropdown-content className="f-dropdown content" aria-hidden="true" tabIndex="-1"&gt;
+          &lt;p onClick={this.setChartParamsAll}&gt;All Patients&lt;/p&gt;
+          &lt;p onClick={this.setChartParams50}&gt;Top 50% of Patients&lt;/p&gt;
+          &lt;p onClick={this.setChartParams10}&gt;Top 10% of Patients&lt;/p&gt;
+          &lt;p onClick={this.setChartParams5}&gt;Top 5% of Patients&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;PieChart
+          mouseOverHandler={this.mouseOverHandler}
+          mouseOutHandler={this.mouseOutHandler}
+          createTooltip={this.createTooltip}
+          innerHoleSize={100}
+          data={this.state.selectedData.slice(0, 10)}
+        /&gt;
+        {this.createTooltip()}
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default DiagnosesChartTile;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 14 2017 18:15:27 GMT-0600 (MDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
